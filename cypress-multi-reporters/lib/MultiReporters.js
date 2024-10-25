@@ -31,6 +31,7 @@ try {
         mocha6plus = false;
     }
 }
+// eslint-disable-next-line no-unused-vars
 catch (e) {
     // istanbul ignore next
     console.warn('Couldn\'t determine Mocha version');
@@ -93,7 +94,8 @@ function MultiReporters(runner, options) {
                 if (Reporter !== null) {
                     return new Reporter(
                         runner, {
-                            reporterOptions
+                            reporterOptions,
+                            reporterOption: reporterOptions
                         }
                     );
                 }
